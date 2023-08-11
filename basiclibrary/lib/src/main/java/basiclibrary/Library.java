@@ -67,11 +67,11 @@ public class Library {
             sum=sum+a[i];
             y++;
         }
-        double avg=sum/y;
+        double avg=(double) sum/y;
         return avg;
 
     }
-    public static void avgArrays(int[][] x) {
+    public static int[] avgArrays(int[][] x) {
         int[] minArray = new int[x.length];
         double minAvg = 100000;
 
@@ -92,4 +92,5 @@ public class Library {
             System.out.print(minArray[i]);
         }
         System.out.println("]");
+        return minArray;
     }}
