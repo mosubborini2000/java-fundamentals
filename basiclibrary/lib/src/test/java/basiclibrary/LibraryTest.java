@@ -1,5 +1,6 @@
 package basiclibrary;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,14 +8,16 @@ class LibraryTest {
     @Test
     void testRoll() {
         Library sut = new Library();
-        int[] result = sut.roll(5);
+        int[] result = sut.roll(3);
+        int[] result2 = sut.roll(5);
 
-        sut.printroll(result);
+        Assertions.assertEquals(3 , result.length);
+        Assertions.assertEquals(5 , result2.length);
 
 
     }
 
-    // ... Other test methods ...
+
 
 
     @Test
@@ -26,26 +29,38 @@ class LibraryTest {
         boolean result1 = sut.containsDuplicates(array1);
         boolean result2 = sut.containsDuplicates(array2);
 
-        System.out.println("Array 1 contains duplicates: " + result1);
-        System.out.println("Array 2 contains duplicates: " + result2);
 
-        assertFalse(result1, "Array 1 should not contain duplicates");
-        assertTrue(result2, "Array 2 should contain duplicates");
+        Assertions.assertEquals(false,result1);
+        Assertions.assertEquals(true,result2);
+
     }
 
     @Test
+    void  testCalcAvg(){
+    Library sut = new Library();
+    //Act
+    int[] arr = {1, 2, 3,6,3};
+    double result = sut.avg(arr);
+
+    //Assert
+    Assertions.assertEquals(3,result);
+
+
+
+}
+    @Test
     void testAvgArrays() {
         Library sut = new Library();
-        int[][] array = {
-                {1, 2, 3, 4, 5},
-                {2, 3, 4, 5, 6, 7},
-                {3, 3, 3, 3, 3}
+
+        int[][] arr = {
+                {1, 2, 3, 4 ,5},
+                {4, 4, 3, 2, 4},
+                {1, 6, 1, 6, 9}
         };
+         int [] result = sut.avgArrays(arr);
 
-        double expectedLowestAvg = 1.0;
-        int[] expectedMinArray = {1, 2, 3, 4, 5};
-
-        sut.avgArrays(array);
+        //Assert
+        Assertions.assertEquals(arr[0],result);
 
     }
 
