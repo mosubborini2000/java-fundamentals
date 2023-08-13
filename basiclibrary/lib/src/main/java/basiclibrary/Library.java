@@ -119,7 +119,7 @@ public class Library {
         HashSet<Integer> unuiqTemp = new HashSet<>();
         int minTemp = Integer.MAX_VALUE;
         int maxTemp = Integer.MIN_VALUE;
-        ArrayList<String> result=new ArrayList();
+//        ArrayList<String> result=new ArrayList();
         for ( int []  weeklyMonthTemperatures:w) {
             for (int Temp : weeklyMonthTemperatures) {
                 unuiqTemp.add(Temp);
