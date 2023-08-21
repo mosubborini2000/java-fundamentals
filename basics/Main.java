@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {+
+    public static void main(String[] args) {
         int dogCount = 1;
 
         System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
