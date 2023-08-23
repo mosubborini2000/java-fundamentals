@@ -5,22 +5,33 @@ package inheritance;
 
 public class Library {
     public static void main(String[] args) {
-//        Restaurant restaurant1 = new Restaurant("Delicious Eats", 3 );
-//        Review review1 = new Review("Great food and atmosphere!", "Alice", 5,restaurant1);
-//        Review review2 = new Review("Service could be better, but tasty food.", "Bob", 3,restaurant1);
+
         Restaurant restaurant2 = new Restaurant("Mosuab", 3);
-        Review review3 = new Review("bad", "ahmad", 4,restaurant2);
-        Review review4 = new Review("verry bad", "waleed", 2,restaurant2);
+        Review review3 = new Review("bad", "ahmad", 5,restaurant2);
+        Review review4 = new Review("verry bad", "waleed", 3,restaurant2);
+//
+//
         restaurant2.addReview(review3);
         restaurant2.addReview(review4);
-//        restaurant1.addReview(review1);
-//        restaurant1.addReview(review2);
-//        System.out.println(restaurant1);
-//        System.out.println(review1);
-//        System.out.println(review2);
+//
         System.out.println(restaurant2);
-        System.out.println(review3);
-        System.out.println(review4);
+        Shop shop1=new Shop("mosuab","tea",3);
+        Review shop1rev1=new Review("vgood","mosuab",4);
+        Review shop1rev2=new Review("great","mosuab",5);
+        shop1.addReview(shop1rev1);
+        shop1.addReview(shop1rev2);
+        System.out.println(shop1);
+//        Theater theater1=new Theater("amman");
+//        Review threv1=new Review("great","mosuab",5,theater1);
+//        Review threv2=new Review("great","waleed",1,theater1,"spider man");
+//        theater1.addMovie("spider man");
+//        theater1.addMovie("spider man");
+//
+//        theater1.addReview(threv1);
+//        theater1.addReview(threv2);
+//        System.out.println(theater1);
+
+
     }
     }
 

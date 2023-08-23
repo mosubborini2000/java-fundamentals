@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class Restaurant  {
+public class Restaurant implements reviewable {
     private String name;
     private int priceCategory;
     private double stars;
@@ -16,7 +16,7 @@ public class Restaurant  {
         this.name = name;
 //        this.stars = stars;
         this.priceCategory = priceCategory;
-        this.averageRating = stars;
+        this.averageRating = 0;
     }
 
     public void setName(String name) {
@@ -36,7 +36,7 @@ public class Restaurant  {
     }
 
     public double getStars() {
-        return stars;
+        return averageRating;
     }
 
     public void setStars(double stars) {
@@ -60,16 +60,21 @@ public class Restaurant  {
                 totalStars += r.getStars();
             }
             this.averageRating = totalStars / reviews.size();
+    }}
+//    private void updateAverageRating() {
+//        double totalStars = 0;
+//        for (Review r : reviews) {
+//            totalStars += r.getStars();
+//        }
+//        this.averageRating = totalStars / reviews.size();
+//    }
 
-            this.stars = averageRating;
-        }
-    }
 
     @Override
     public String toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
-                ", stars=" + stars +
+                ", stars=" + averageRating +
                 ", priceCategory=" + priceCategory +
                 '}';
         }
